@@ -1,0 +1,401 @@
+:root {
+    --wh: #fafafa;
+
+    --text: #222;
+    --sub_text: #666;
+    --mute: #ddd;
+
+    --side_back: #DDE8FF;
+
+    --error: #FF2F2F;
+    --warn: #FFCC00;
+    --okay: #34C759;
+
+    --type1: #FF6B5A;
+    --side_1: #FFC4BD;
+
+    --type2: #4EA8FF;
+    --side_2: #B8DCFF;
+
+    --type3: #FFC845;
+    --side_3: #FFE9B5;
+
+    --type4: #8B6BFF;
+    --side_4: #D1C4FF;
+
+    --type5: #2EC9A8;
+    --side_5: #ABE9DC;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background: url("../image/bg.svg");
+    background-size: cover;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+}
+
+.wrap {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: rgb(0, 0, 0, 0.5);
+}
+
+.login_box {
+    position: absolute;
+    width: 60%;
+    height: 70%;
+    top: 50%;
+    left: 50%;
+    background: var(--wh);
+    transform: translate(-50%, -50%);
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgb(0, 0, 0, 0.2);
+    display: flex;
+}
+
+.login_box>div {
+    height: 100%;
+    padding: 30px;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 60%;
+    border-radius: 15px 0 0 15px;
+    background: #F2F3FD;
+}
+
+.content header {
+    display: flex;
+    gap: 8px;
+}
+
+.main_content {
+    height: 100%;
+    gap: 20px;
+    justify-content: space-between;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.content .main {
+    height: 70%;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    /* box-sizing: border-box; */
+}
+
+.title p {
+    color: var(--sub_text);
+}
+
+.login_form {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-around;
+    width: 40%;
+    border-radius: 0 15px 15px 0;
+}
+
+.login_form header {
+    color: var(--type1)
+}
+
+.login_form header h1 {
+    font-size: 40px;
+}
+
+.input_wrap,
+.input_form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.input_form input {
+    height: 42px;
+    width: 100%;
+    color: var(--text) !important;
+    border-radius: 8px;
+    border: 1px solid var(--mute);
+}
+
+/* 비밀번호 */
+.pw_wrap {
+    position: relative;
+    height: 42px;
+    display: flex;
+    border-radius: 8px;
+    border: 1px solid var(--mute);
+    align-items: center;
+    transition: border-color .2s ease;
+}
+
+.pw_wrap input {
+    flex: 1;
+    border: 0;
+    outline: 0;
+    background: transparent;
+    padding: 8px 32px 8px 0;
+    transition: color .2s ease;
+}
+
+.pw_wrap .toggle {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-40%);
+    cursor: default;
+}
+
+.pw_wrap .toggle img {
+    cursor: pointer;
+    width: 22px;
+    opacity: 0.5;
+    transition: opacity .2s ease, filter .2s ease;
+}
+
+.pw_wrap.active .toggle img {
+    opacity: 1;
+    filter: drop-shadow(0 0 0 var(--title));
+}
+
+
+.login_btn:disabled {
+    background: #ccc;
+}
+
+
+
+.input_form input:focus {
+    outline: 2px solid var(--type1);
+}
+
+.auto_login {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.auto_login input {
+    width: 16px;
+    height: 16px;
+    accent-color: var(--type1);
+}
+
+
+.arl_text p {
+    font-size: 12px;
+    margin: 5px;
+}
+
+.wrong {
+    color: var(--error);
+}
+
+.right {
+    color: var(--okay);
+}
+
+.login_form button {
+    width: 60%;
+    height: 45px;
+    margin: 0 auto;
+    border-radius: 999px;
+    background: var(--type1);
+    color: var(--wh);
+}
+
+/* card */
+.card {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background: var(--wh);
+    padding: 15px;
+    border-radius: 12px;
+    border: 1px solid #ddd;
+}
+
+.card_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    border-bottom: 1px solid rgb(0, 0, 0, 0.05);
+    box-shadow: 0 4px 3px -5px rgb(0, 0, 0, 0.25);
+}
+
+.card_content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.card_content .text {
+    display: flex;
+    justify-content: center;
+    gap: 3px;
+    align-items: center;
+}
+
+/* 모바일 차트 */
+.m_graph_wrapper {
+    position: relative;
+    width: 100%;
+    height: 20px;
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.m_graph_fill {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    border-radius: 16px;
+    transition: width 0.5s ease;
+}
+
+.m_graph_value {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    z-index: 2;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    padding-right: 12px;
+}
+
+/* num_1 */
+.num_1 .m_graph_wrapper {
+    background: var(--side_1);
+}
+
+.num_1 .m_graph_fill {
+    background: var(--type1);
+}
+
+/* num_2 */
+.num_2 .m_graph_wrapper {
+    background: var(--side_2);
+}
+
+.num_2 .m_graph_fill {
+    background: var(--type2);
+}
+
+/* num_3 */
+.num_3 .m_graph_wrapper {
+    background: var(--side_3);
+}
+
+.num_3 .m_graph_fill {
+    background: var(--type3);
+}
+
+/* num_4 */
+.num_4 .m_graph_wrapper {
+    background: var(--side_4);
+}
+
+.num_4 .m_graph_fill {
+    background: var(--type4);
+}
+
+/* num_5 */
+.num_5 .m_graph_wrapper {
+    background: var(--side_5);
+}
+
+.num_5 .m_graph_fill {
+    background: var(--type5);
+}
+
+/* num_avg */
+.num_avg .m_graph_wrapper {
+    background: #cccccc;
+}
+
+.num_avg .m_graph_fill {
+    background: #666666;
+}
+
+
+/* 반응형 */
+
+/* 너비 기준 */
+@media screen and (max-width: 1290px) {
+    .login_box {
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 1110px) {
+    .login_box {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 960px) {
+    .content {
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 910px) {
+    .content {
+        display: none;
+    }
+
+    .login_form {
+        width: 100%;
+    }
+}
+
+/* 높이 기준 */
+@media screen and (max-height: 650px) {
+    .login_box {
+        height: 80%;
+    }
+
+    .content {
+        justify-content: center;
+        gap: 10px;
+    }
+}
+
+@media screen and (max-height: 550px) {
+    .card {
+        padding: 10px;
+    }
+
+    .card_header {
+        padding: 2px;
+    }
+}
+
+@media screen and (max-height: 500px) {
+    .m_graph {
+        display: none;
+    }
+}
+
+@media screen and (max-height: 450px) {
+
+    .login_box>div {
+        padding: 20px;
+    }
+}

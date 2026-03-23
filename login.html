@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sun_login</title>
+
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/login.css">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="./js/log.js"></script>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="login_box">
+            <div class="content">
+                <header>
+                    <img src="./image/Sunny.svg" alt="sun_icon">
+                    <div class="title">
+                        <p>Sensor Monitoring System</p>
+                        <h2>태양광 단지 센서 모니터링 시스템</h2>
+                    </div>
+                </header>
+
+                <div class="main">
+                    <p>실시간 센서 현황</p>
+                    <div class="main_content">
+                        <div class="card num_1">
+                            <div class="card_header">
+                                <span>1구역</span>
+                            </div>
+
+                            <div class="card_content">
+                                <div class="text">
+                                    <h3>819.6</h3>
+                                    <span>W/m²</span>
+                                </div>
+
+                                <div class="m_graph">
+                                    <div class="m_graph_wrapper">
+                                        <div class="m_graph_fill" style="width: 45%;">
+                                            <div class="m_graph_value" style="right: 0;">45</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card num_2">
+                            <div class="card_header">
+                                <span>2구역</span>
+                            </div>
+
+                            <div class="card_content">
+                                <div class="text">
+                                    <h3>819.6</h3>
+                                    <span>W/m²</span>
+                                </div>
+
+                                <div class="m_graph">
+                                    <div class="m_graph_wrapper">
+                                        <div class="m_graph_fill" style="width: 45%;">
+                                            <div class="m_graph_value" style="right: 0;">45</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card num_3">
+                            <div class="card_header">
+                                <span>3구역</span>
+                            </div>
+
+                            <div class="card_content">
+                                <div class="text">
+                                    <h3>819.6</h3>
+                                    <span>W/m²</span>
+                                </div>
+
+                                <div class="m_graph">
+                                    <div class="m_graph_wrapper">
+                                        <div class="m_graph_fill" style="width: 45%;">
+                                            <div class="m_graph_value" style="right: 0;">45</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card num_4">
+                            <div class="card_header">
+                                <span>4구역</span>
+                            </div>
+
+                            <div class="card_content">
+                                <div class="text">
+                                    <h3>819.6</h3>
+                                    <span>W/m²</span>
+                                </div>
+
+                                <div class="m_graph">
+                                    <div class="m_graph_wrapper">
+                                        <div class="m_graph_fill" style="width: 45%;">
+                                            <div class="m_graph_value" style="right: 0;">45</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card num_5">
+                            <div class="card_header">
+                                <span>5구역</span>
+                            </div>
+
+                            <div class="card_content">
+                                <div class="text">
+                                    <h3>819.6</h3>
+                                    <span>W/m²</span>
+                                </div>
+
+                                <div class="m_graph">
+                                    <div class="m_graph_wrapper">
+                                        <div class="m_graph_fill" style="width: 45%;">
+                                            <div class="m_graph_value" style="right: 0;">45</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card num_avg">
+                            <div class="card_header">
+                                <span>일사 평균</span>
+                            </div>
+
+                            <div class="card_content">
+                                <div class="text">
+                                    <h3>819.6</h3>
+                                    <span>W/m²</span>
+                                </div>
+
+                                <div class="m_graph">
+                                    <div class="m_graph_wrapper">
+                                        <div class="m_graph_fill" style="width: 45%;">
+                                            <div class="m_graph_value" style="right: 0;">45</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="login_form">
+                <header>
+                    <h1>Logo Here</h1>
+                </header>
+
+                <div class="input_wrap">
+                    <div class="input_form">
+                        <div>
+                            <p>ID</p>
+                            <input type="text" id="user_id" placeholder="아이디를 입력하세요">
+                        </div>
+
+                        <div>
+                            <p>Password</p>
+                            <!-- <input type="password" id="user_pw" placeholder="비밀번호를 입력하세요"> -->
+                            <div class="pw_wrap" id="pwWrap">
+                                <input type="password" id="user_pw" placeholder="비밀번호를 입력하세요" />
+                                <span class="toggle">
+                                    <img src="./image/eye.svg" alt="보기" id="togglePw" style="margin-right: 20px;" />
+                                </span>
+                            </div>
+                            <div class="arl_text">
+                                <p class="wrong">잘못된 비밀번호입니다.</p>
+                                <p class="right">옳은 비밀번호입니다.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="auto_login">
+                        <input type="checkbox" id="chk_auto">
+                        <label for="chk_auto">다음에도 자동 로그인</label>
+                    </div>
+                </div>
+
+                <button class="login_btn" type="button" disabled>
+                    <p>LOG IN</p>
+                </button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
